@@ -1,9 +1,9 @@
 class Blew < Formula
   desc "BLE scanner and CLI tool for macOS"
-  version "0.2.1"
+  version "0.2.2"
   homepage "https://github.com/stass/blew"
-  url "https://github.com/stass/blew/archive/refs/tags/v0.2.1.tar.gz"
-  sha256 "0d78097de89cdc60811621904ccd568740a308ebe2dfe3726a4e09d7654dc0a8"
+  url "https://github.com/stass/blew/archive/refs/tags/v0.2.2.tar.gz"
+  sha256 "0a995cfe749f4b1542ee0358f5a142e4e540f2ae3e5649a5015c62dfc84d743e"
   license "BSD-2-Clause"
 
   depends_on :macos
