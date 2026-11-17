@@ -5,8 +5,8 @@
 class Typec < Formula
   desc "C11 with variants, generics and errors as values"
   homepage "https://github.com/stass/type-c"
-  url "https://github.com/stass/type-c/archive/refs/tags/v0.2.tar.gz"
-  sha256 "746e248a63604c3e3018bcfef887457ecde00609f716537ed41aa4c05b5fb13a"
+  url "https://github.com/stass/type-c/archive/refs/tags/v0.3.tar.gz"
+  sha256 "54cf420da978545adbeda08cc1b0d2f92bb1fab4ce260d8b24fb541f66fa399d"
   license "BSD-2-Clause"
   head "https://github.com/stass/type-c.git", branch: "master"
 
@@ -15,7 +15,8 @@ class Typec < Formula
 
   def install
     system "dune", "build", "-p", "typec", "--profile", "release"
-    system "dune", "install", "-p", "typec", "--prefix", prefix
+    system "dune", "install", "-p", "typec", "--prefix", prefix,
+           "--mandir", man, "--docdir", share/"doc"
   end
 
   test do
@@ -46,5 +47,8 @@ class Typec < Formula
     EOS
     system bin/"typec", "--cc=#{ENV.cc}", "shape.tc", "-o", "shape"
     assert_equal "12 12\n", shell_output("./shape")
+
+    version_lines = shell_output("#{bin}/typec --cc=#{ENV.cc} --version").lines
+    assert_equal "typec #{version}\n", version_lines.last
   end
 end
