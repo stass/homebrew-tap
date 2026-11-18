@@ -5,8 +5,8 @@
 class Typec < Formula
   desc "C11 with variants, generics and errors as values"
   homepage "https://github.com/stass/type-c"
-  url "https://github.com/stass/type-c/archive/refs/tags/v0.3.tar.gz"
-  sha256 "54cf420da978545adbeda08cc1b0d2f92bb1fab4ce260d8b24fb541f66fa399d"
+  url "https://github.com/stass/type-c/archive/refs/tags/v1.0.tar.gz"
+  sha256 "334c5f5a16413d707a57768b7ab13b31a62c5c8529c95fa5f5167d11f071ed5f"
   license "BSD-2-Clause"
   head "https://github.com/stass/type-c.git", branch: "master"
 
